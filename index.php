@@ -7,6 +7,20 @@
     <title>PHP Todo</title>
 </head>
 <body>
-    
+
+  <div id="app">
+    <h1>Lista Todo</h1>
+    <input type="text" v-model="newTodo">
+    <button @click="addTodo">Aggiungi</button>
+
+    <ul>
+      <li v-for="(todo, index) in todos" :key="index">
+        {{ todo }}
+        <button @click="removeTodo(index)">Rimuovi</button>
+      </li>
+    </ul>
+  </div>
+
+  <script src="/js/script.js"></script>
 </body>
 </html>
